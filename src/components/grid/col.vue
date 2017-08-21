@@ -32,7 +32,6 @@ export default {
             let classList = [
                 `${prefix}`
             ];
-            console.log(this.gutter);
             ['span', 'offset', 'pull', 'push'].forEach(prop => {
                 if (this[prop]) {
                     classList.push(

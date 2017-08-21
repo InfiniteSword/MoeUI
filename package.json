@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --port 23333 --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --content-base test/ --open --inline --hot --client-log-level warning --compress --history-api-fallback --port 23333 --config build/webpack.dev.conf.js",
     "build": "rm -rf ./dist && cross-env NODE_ENV=production webpack --config build/webpack.pro.conf.js --progress --hide-modules",
     "build-doc": "rm -rf ./dist && cross-env NODE_ENV=production webpack --config build/webpack.doc.conf.js --progress --hide-modules"
   },

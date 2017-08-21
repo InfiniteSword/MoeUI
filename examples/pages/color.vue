@@ -6,6 +6,9 @@
                 <div class="grid-content bg-default">default</div>
             </moe-col>
             <moe-col :span="6">
+                <div class="grid-content bg-primary">primary</div>
+            </moe-col>
+            <moe-col :span="6">
                 <div class="grid-content bg-violent">violent</div>
             </moe-col>
             <moe-col :span="6">
@@ -31,6 +34,9 @@ export default {
     max-width: calc(100% - 250px);
 }
 .bg-default{
+    background: #8f8f8f;
+}
+.bg-primary{
     background: #c0b0ff;
 }
 .bg-violent{

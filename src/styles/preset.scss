@@ -9,6 +9,9 @@ $background: #fcfcfc;
 $default-color: #8f8f8f;
 $default-color-dark: #808080;
 $white-color: #fffefe;
+$grey-color: #C5C5C5;
+$disable-bg: #fcfcfc;
+$disable-border: #e0d9ff;
 
 $primary-color: #c0b0ff;
 $primary-color-light: #cabdff;
@@ -25,10 +28,24 @@ $margin-p: 5px 0;
 $btn-default-bg: #fcfcfc;
 $btn-default-border: #c0b0ff;
 $btn-disable-color: #e0d9ff;
-$btn-disable-bg: #fcfcfc;
-$btn-disable-border: #e0d9ff;
+$btn-disable-bg: $disable-bg;
+$btn-disable-border: $disable-border;
 $btn-padding-base: 6px 15px;
 $btn-border-radius: 4px;
 $btn-svg-width-base: 20px;
 
+$input-height: 32px;
+$input-padding: 4px 7px;
+$input-default-color: $default-color;
+$input-border-color: $grey-color;
+$input-placeholder-color: #C5C5C5;
+$input-disabled-bg: #e4e4e4;
+$input-primary-color: $primary-color;
+$input-primary-color-light: $primary-color-light;
+$input-disabled-border: $disable-border;
+$input-border-radius: 4px;
+
 $transition-time: .3s;
+
+
+

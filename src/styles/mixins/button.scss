@@ -100,11 +100,10 @@
 }
 
 @mixin btn-svg() {
+    @include default-svg();
     position: absolute;
     top: 0;
     right: 0;
-    width: $btn-svg-width-base;
-    height: auto;
     margin-top: -12%;
     margin-right: -12%;
     z-index: 10;

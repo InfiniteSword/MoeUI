@@ -1,0 +1,54 @@
+$radio-prefix: #{$prefix}radio;
+$radio-svg-prefix: #{$radio-prefix}-svg;
+.#{$radio-prefix}-wrapper {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.#{$radio-prefix}-primary {
+    @include radio-factory($primary-color);
+    .#{$radio-prefix} {
+        &:checked~.#{$radio-svg-prefix}-shadow {
+            animation: svg-twinkle-primary .8s linear;
+        }
+    }
+    @include svg-twinkle-keyframes(svg-twinkle-primary, $primary-color);
+}
+
+.#{$radio-prefix}-violent {
+    @include radio-factory($violent-color);
+    .#{$radio-prefix} {
+        &:checked~.#{$radio-svg-prefix}-shadow {
+            animation: svg-twinkle-violent .8s linear;
+        }
+    }
+    @include svg-twinkle-keyframes(svg-twinkle-violent, $violent-color);
+}
+
+.#{$radio-prefix}-remindful {
+    @include radio-factory($remindful-color);
+    .#{$radio-prefix} {
+        &:checked~.#{$radio-svg-prefix}-shadow {
+            animation: svg-twinkle-remindful .8s linear;
+        }
+    }
+    @include svg-twinkle-keyframes(svg-twinkle-remindful, $remindful-color);
+}
+
+.#{$radio-prefix}-comfy {
+    @include radio-factory($comfy-color);
+    .#{$radio-prefix} {
+        &:checked~.#{$radio-svg-prefix}-shadow {
+            animation: svg-twinkle-comfy .8s linear;
+        }
+    }
+    @include svg-twinkle-keyframes(svg-twinkle-comfy, $comfy-color);
+}
+
+.#{$radio-prefix}-hide {
+    position: absolute;
+    left: -100vw;
+}

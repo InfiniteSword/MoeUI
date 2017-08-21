@@ -1,6 +1,5 @@
 <template>
     <div class="grid-container">
-    
         <h2>Basic</h2>
         <moe-row :gutter="20">
             <moe-col :span="8">

@@ -1,0 +1,68 @@
+$radio-prefix: #{$prefix}radio;
+$radio-svg-prefix: #{$radio-prefix}-svg;
+@mixin radio-factory($color) {
+    &:hover .#{$radio-svg-prefix} {
+        stroke: $color;
+    }
+    .#{$radio-prefix} {
+        &:checked+.#{$radio-svg-prefix} {
+            stroke: $color;
+            fill: lighten($color, 3%);
+            filter: drop-shadow(0 0 1px lighten($color, 3%));
+            animation: svg-scale 1s cubic-bezier(.17, .89, .32, 1.49); // http://www.w3cplus.com/animation/recreating-the-twitter-heart-animation.html
+        }
+    }
+    .#{$radio-svg-prefix} {
+        @include default-svg();
+        stroke: $color;
+        stroke-width: 2px;
+        fill: none;
+        transition: fill .4s, stroke .3s;
+    }
+    .#{$radio-svg-prefix}-shadow {
+        @include default-svg();
+        transform: scale(0.5);
+        stroke: none;
+        margin-left: -$btn-svg-width-base - 4px;
+        stroke-width: 2px;
+        margin-right: 5px;
+        fill: none;
+        transition: transform .2s;
+    }
+    @keyframes svg-scale {
+        0%,
+        17.5% {
+            transform: scale(0);
+        }
+    }
+}
+
+@mixin svg-twinkle-keyframes($animationName, $color) {
+    @keyframes #{$animationName} {
+        0% {
+            transform: scale(0.5);
+            stroke: none;
+            filter: drop-shadow(0 0 3px $color);
+        }
+        1% {
+            transform: scale(0.5);
+            stroke: $background;
+            filter: drop-shadow(0 0 3px $color);
+        }
+        50% {
+            transform: scale(1);
+            stroke: $color;
+            filter: drop-shadow(0 0 3px $color);
+        }
+        99% {
+            transform: scale(1.6);
+            stroke: $background;
+            filter: drop-shadow(0 0 0 lighten($color, 3%));
+        }
+        100% {
+            transform: scale(1.6);
+            stroke: none;
+            filter: drop-shadow(0 0 0 $color);
+        }
+    }
+}
